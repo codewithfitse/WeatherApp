@@ -1,3 +1,5 @@
+const size = "100px";
+
 const WindyIcon = () => (
   <svg
     height="32px"
@@ -183,7 +185,7 @@ export const SunnyCloudyIcon = () => (
   </svg>
 );
 
-export const SunnyIcon = ({ size = 48, sunColor = "#efcc00" }) => (
+export const SunnyIcon = ({ sunColor = "#efcc00" }) => (
   <svg
     viewBox="0 0 64 64"
     xmlns="http://www.w3.org/2000/svg"
@@ -303,7 +305,7 @@ export const SunnyIcon = ({ size = 48, sunColor = "#efcc00" }) => (
   </svg>
 );
 
-export const SnowIcon = ({ size = 48 }) => (
+export const SnowIcon = () => (
   <svg
     viewBox="0 0 64 64"
     xmlns="http://www.w3.org/2000/svg"
@@ -375,7 +377,7 @@ export const SnowIcon = ({ size = 48 }) => (
   </svg>
 );
 
-export const SunnyRainyIcon = ({ size = 48 }) => (
+export const SunnyRainyIcon = () => (
   <svg
     viewBox="0 0 64 64"
     xmlns="http://www.w3.org/2000/svg"
