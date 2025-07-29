@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import WindyIcon, { HumidIcon, SunnyCloudyIcon } from "../componet/Windy";
+import WindyIcon, {
+  HumidIcon,
+  SnowIcon,
+  SunnyCloudyIcon,
+  SunnyRainyIcon,
+} from "../componet/Windy";
 
 export const Home = () => {
   const [searchInput, setSearchInput] = useState("Ethiopia");
@@ -20,6 +25,22 @@ export const Home = () => {
     setSearch(searchInput);
   }
 
+  const WeatherIconRenderer = ({ main }) => {
+    switch (main) {
+      case "Clouds":
+        return <SunnyCloudyIcon />;
+      case "Clear":
+        return <SunnyIcon />;
+      case "Snow":
+        return <SnowIcon />;
+      case "Rain":
+        return <SunnyRainyIcon />;
+
+      default:
+        return null;
+    }
+  };
+
   return (
     <>
       <div className="w-full h-screen text-white bg-gray-900 flex justify-center">
@@ -27,7 +48,8 @@ export const Home = () => {
           <p className="">
             {weather?.name}, {weather?.sys?.country}
           </p>
-          <SunnyCloudyIcon />
+          <WeatherIconRenderer main={weather?.weather?.[0].main} />
+
           <h1 className="">{weather?.main?.temp}°F</h1>
           <p className="">{weather?.weather?.[0].main}</p>
           <div className="w-full flex justify-around">
