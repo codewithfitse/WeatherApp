@@ -38,7 +38,7 @@ Made with ❤️ by [@codewithfitse](https://github.com/codewithfitse)
 
 | Sunny             | Rainy             | Cloudy             |
 |------------------|------------------|-------------------|
-| ![](./public/sunny.png) | ![](./public/rainy.png) | ![](./public/cloudy.png) |
+| ![](./public/weather/Clear.png) | ![](./weather/public/Rain.png) | ![](./public/weather/Cloud.png) |
 
 ---
 
@@ -60,7 +60,7 @@ Clone the repo:
 
 ```bash
 git clone https://github.com/codewithfitse/WeatherApp.git
-cd WeatherApp
+cd Frontend
 Install dependencies:
 
 bash
