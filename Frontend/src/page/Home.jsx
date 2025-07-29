@@ -36,7 +36,6 @@ export const Home = () => {
         return <SnowIcon />;
       case "Rain":
         return <SunnyRainyIcon />;
-
       default:
         return <SunnyIcon />;
     }
@@ -52,7 +51,7 @@ export const Home = () => {
           <p className="">
             {weather?.name}, {weather?.sys?.country}
           </p>
-          <WeatherIconRenderer main={weather?.weather?.[0].main} />
+          <WeatherIconRenderer main={weather?.weather?.[0].description} />
 
           <h1 className="">{weather?.main?.temp}°F</h1>
           <p className="">{weather?.weather?.[0].main}</p>
