@@ -54,7 +54,7 @@ export const Home = () => {
       case "Snow": {
         return "bg-Snow";
       }
-      case "Cloud": {
+      case "Clouds": {
         return "bg-Cloud";
       }
       default: {
@@ -66,14 +66,14 @@ export const Home = () => {
   return (
     <>
       <div
-        className={`w-full min-h-full text-white ${bgChanger(
+        className={`w-full min-h-screen text-white ${bgChanger(
           weather?.weather?.[0].main
         )} flex flex-col items-center overflow-x-hidden`}
       >
         <header className="w-full h-[70px] flex justify-center items-center font-times bg-white/5 backdrop-blur-2xl">
           <h1 className="">Weather Api</h1>
         </header>
-        <div className="w-[80%] h-[70%] mt-[20px] p-3 flex flex-col items-center justify-center border-2 border-amber-50 bg-white/5 backdrop-blur-2xl rounded-2xl space-y-3">
+        <div className="w-[80%] h-[70%] mt-[20px] p-3 flex flex-col items-center justify-center border-2 border-amber-50 bg-white/5 backdrop-blur-[3px] rounded-2xl space-y-3">
           <p className="">
             {weather?.name}, {weather?.sys?.country}
           </p>
