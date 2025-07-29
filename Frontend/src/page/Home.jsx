@@ -4,6 +4,7 @@ import WindyIcon, {
   HumidIcon,
   SnowIcon,
   SunnyCloudyIcon,
+  SunnyIcon,
   SunnyRainyIcon,
 } from "../componet/Windy";
 
@@ -37,7 +38,7 @@ export const Home = () => {
         return <SunnyRainyIcon />;
 
       default:
-        return null;
+        return <SunnyIcon />;
     }
   };
 
