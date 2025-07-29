@@ -66,12 +66,16 @@ export const Home = () => {
               <p className="">{weather?.wind?.speed}km</p>
             </div>
           </div>
-          <div className="w-full flex justify-center space-x-6">
-            <form action="" onSubmit={handleSearch}>
+          <div className="w-full ">
+            <form
+              action=""
+              onSubmit={handleSearch}
+              className="flex justify-center space-x-6"
+            >
               <input
                 type="text"
                 value={searchInput}
-                className="w-[60%] p-3 bg-amber-50 text-black rounded-2xl"
+                className="w-full p-3 bg-amber-50 text-black rounded-2xl"
                 placeholder="Enter City..."
                 onChange={(e) => setSearchInput(e.target.value)}
               />
