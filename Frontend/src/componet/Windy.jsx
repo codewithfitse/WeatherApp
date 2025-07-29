@@ -185,122 +185,32 @@ export const SunnyCloudyIcon = () => (
   </svg>
 );
 
-export const SunnyIcon = ({ sunColor = "#efcc00" }) => (
+export const SunnyIcon = () => (
   <svg
-    viewBox="0 0 64 64"
+    data-name="Layer 1"
+    id="Layer_1"
+    viewBox="0 0 128 128"
     xmlns="http://www.w3.org/2000/svg"
     width={size}
     height={size}
   >
-    <defs>
-      <linearGradient
-        id="linear-gradient"
-        x1="46.72"
-        x2="25.63"
-        y1="58.39"
-        y2="31.08"
-        gradientUnits="userSpaceOnUse"
-        gradientTransform="matrix(-1, 0, 0, 1, 65.8, 0)"
-      >
-        <stop offset="0" stopColor="#f2f2f2" />
-        <stop offset="1" stopColor="#cfcfcf" />
-      </linearGradient>
-      <linearGradient
-        id="linear-gradient-2"
-        x1="12.25"
-        x2="23.86"
-        y1="56.93"
-        y2="74.58"
-        gradientUnits="userSpaceOnUse"
-        gradientTransform="matrix(0, -1, -1, 0, 109.04, 59.43)"
-      >
-        <stop offset="0.02" stopColor="#fff" />
-        <stop offset="1" stopColor="#fff" stopOpacity="0" />
-      </linearGradient>
-    </defs>
-    <circle cx="39.8" cy="28" r="12.59" fill={sunColor} />
-    <line
-      x1="39.8"
-      y1="8"
-      x2="39.8"
-      y2="12.44"
-      stroke={sunColor}
-      strokeWidth="3"
-      strokeLinecap="round"
-    />
-    <line
-      x1="39.8"
-      y1="43.56"
-      x2="39.8"
-      y2="48"
-      stroke={sunColor}
-      strokeWidth="3"
-      strokeLinecap="round"
-    />
-    <line
-      x1="19.8"
-      y1="28"
-      x2="24.25"
-      y2="28"
-      stroke={sunColor}
-      strokeWidth="3"
-      strokeLinecap="round"
-    />
-    <line
-      x1="55.36"
-      y1="28"
-      x2="59.8"
-      y2="28"
-      stroke={sunColor}
-      strokeWidth="3"
-      strokeLinecap="round"
-    />
-    <line
-      x1="25.66"
-      y1="13.86"
-      x2="28.8"
-      y2="17"
-      stroke={sunColor}
-      strokeWidth="3"
-      strokeLinecap="round"
-    />
-    <line
-      x1="50.8"
-      y1="39"
-      x2="53.94"
-      y2="42.14"
-      stroke={sunColor}
-      strokeWidth="3"
-      strokeLinecap="round"
-    />
-    <line
-      x1="25.66"
-      y1="42.14"
-      x2="28.8"
-      y2="39"
-      stroke={sunColor}
-      strokeWidth="3"
-      strokeLinecap="round"
-    />
-    <line
-      x1="50.8"
-      y1="17"
-      x2="53.94"
-      y2="13.86"
-      stroke={sunColor}
-      strokeWidth="3"
-      strokeLinecap="round"
+    <title>Sunny Icon</title>
+    <circle cx="64" cy="64" r="37.202" fill="#fabe02" />
+    <path
+      d="M64,26.8a37.541,37.541,0,0,0-4.348.261,37.2,37.2,0,0,1,0,73.883A37.2,37.2,0,1,0,64,26.8Z"
+      fill="#f59a1d"
     />
     <path
-      d="M23.5,21.9A17.49,17.49,0,0,1,39,31.22a13.75,13.75,0,1,1,6.92,25.62L23.5,56.9a17.5,17.5,0,0,1,0-35Z"
-      fill="url(#linear-gradient)"
+      d="M42.1,82.38a1.748,1.748,0,0,1-1.4-.691q-.455-.6-.88-1.222a1.75,1.75,0,1,1,2.891-1.973q.375.549.777,1.078A1.75,1.75,0,0,1,42.1,82.38Z"
+      fill="#f59a1d"
     />
-    <circle
-      cx="45.89"
-      cy="43.09"
-      r="13.75"
-      transform="translate(-7.96 75.69) rotate(-74.39)"
-      fill="url(#linear-gradient-2)"
+    <path
+      d="M38.534,76.147a1.751,1.751,0,0,1-1.621-1.088A29.092,29.092,0,0,1,34.75,64a1.75,1.75,0,0,1,3.5,0,25.6,25.6,0,0,0,1.9,9.734,1.751,1.751,0,0,1-1.62,2.413Z"
+      fill="#f59a1d"
+    />
+    <path
+      d="M64,19.791a1.75,1.75,0,0,1-1.75-1.75V9a1.75,1.75,0,0,1,3.5,0v9.041A1.75,1.75,0,0,1,64,19.791ZM41.9,25.714a1.75,1.75,0,0,0,.641-2.391l-4.521-7.83a1.75,1.75,0,0,0-3.031,1.75l4.521,7.83a1.749,1.749,0,0,0,2.391.641ZM25.714,41.9a1.75,1.75,0,0,0-.641-2.391l-7.83-4.521a1.75,1.75,0,1,0-1.75,3.031l7.83,4.521a1.749,1.749,0,0,0,2.391-.641Zm78.963.641,7.83-4.521a1.75,1.75,0,0,0-1.75-3.031l-7.83,4.521a1.75,1.75,0,1,0,1.75,3.031ZM88.5,25.073l4.521-7.83a1.75,1.75,0,0,0-3.031-1.75l-4.521,7.83a1.75,1.75,0,1,0,3.031,1.75ZM65.75,119v-9.041a1.75,1.75,0,1,0-3.5,0V119a1.75,1.75,0,0,0,3.5,0Zm55-55A1.75,1.75,0,0,0,119,62.25h-9.041a1.75,1.75,0,1,0,0,3.5H119A1.75,1.75,0,0,0,120.75,64ZM19.791,64a1.75,1.75,0,0,0-1.75-1.75H9a1.75,1.75,0,0,0,0,3.5h9.041A1.75,1.75,0,0,0,19.791,64Zm72.584,49.147a1.75,1.75,0,0,0,.641-2.391l-4.521-7.83a1.75,1.75,0,1,0-3.031,1.75l4.521,7.83a1.749,1.749,0,0,0,2.391.641Zm20.772-20.772a1.75,1.75,0,0,0-.641-2.391l-7.83-4.521a1.75,1.75,0,1,0-1.75,3.031l7.83,4.521a1.749,1.749,0,0,0,2.391-.641Zm-95.9.641,7.83-4.521a1.75,1.75,0,1,0-1.75-3.031l-7.83,4.521a1.75,1.75,0,1,0,1.75,3.031Zm20.772,19.491,4.521-7.83a1.75,1.75,0,1,0-3.031-1.75l-4.521,7.83a1.75,1.75,0,1,0,3.031,1.75Z"
+      fill="#fabe02"
     />
   </svg>
 );
