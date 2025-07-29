@@ -4,7 +4,7 @@
 
 > Real-time weather updates, dynamic visuals, and clean UI – built with React + OpenWeatherMap.
 
-![Preview](./public/preview.png)
+![Preview](./public/LandingBg.png)
 
 ---
 
