@@ -41,12 +41,24 @@ export const Home = () => {
     }
   };
 
-  const main = weather?.weather?.[0].main;
+  const mains = weather?.weather?.[0].main;
 
-  const bgChanger = (main) => {
-    switch (main) {
+  const bgChanger = (mains) => {
+    switch (mains) {
       case "Clear": {
         return "bg-clear";
+      }
+      case "Rain": {
+        return "bg-Rain";
+      }
+      case "Snow": {
+        return "bg-Snow";
+      }
+      case "Cloud": {
+        return "bg-Cloud";
+      }
+      default: {
+        return "bg-Default";
       }
     }
   };
@@ -54,7 +66,7 @@ export const Home = () => {
   return (
     <>
       <div
-        className={`w-full h-screen text-white ${bgChanger(
+        className={`w-full min-h-full text-white ${bgChanger(
           weather?.weather?.[0].main
         )} flex flex-col items-center overflow-x-hidden`}
       >
