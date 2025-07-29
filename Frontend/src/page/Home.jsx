@@ -9,6 +9,7 @@ import WindyIcon, {
 } from "../componet/Windy";
 
 export const Home = () => {
+  const [err, setErr] = useState("");
   const [searchInput, setSearchInput] = useState("Ethiopia");
   const [search, setSearch] = useState("Ethiopia");
   const [weather, setWeather] = useState(null);
@@ -18,7 +19,9 @@ export const Home = () => {
   useEffect(() => {
     const res = axios(
       `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=83df8b5eea1f607c363ec00812d44b7e`
-    ).then((response) => setWeather(response.data));
+    )
+      .then((response) => setWeather(response.data))
+      .catch((error) => setErr(error));
   }, [search]);
 
   function handleSearch(e) {
@@ -41,10 +44,10 @@ export const Home = () => {
     }
   };
 
-  const mains = weather?.weather?.[0].main;
+  //const mains = weather?.weather?.[0].main;
 
-  const bgChanger = (mains) => {
-    switch (mains) {
+  const bgChanger = (main) => {
+    switch (main) {
       case "Clear": {
         return "bg-clear";
       }
@@ -115,6 +118,7 @@ export const Home = () => {
                 Submit
               </button>
             </form>
+            {err ? <p>{err}</p> : ""}
           </div>
         </div>
       </div>
