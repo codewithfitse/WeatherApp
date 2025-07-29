@@ -1,7 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export const Home = () => {
   const [weather, setWeather] = useState(null);
+
+  useEffect(() => {
+    const res = axios(
+      `https://api.openweathermap.org/data/2.5/weather?q=itali&appid=83df8b5eea1f607c363ec00812d44b7e`
+    ).then((response) => setWeather(response.data));
+  }, []);
 
   return (
     <>
