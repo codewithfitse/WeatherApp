@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 export const Home = () => {
-  const [search, setSearch] = useState("itali");
+  const [search, setSearch] = useState("Ethiopia");
   const [weather, setWeather] = useState(null);
 
   useEffect(() => {
