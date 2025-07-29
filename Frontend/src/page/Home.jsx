@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import WindyIcon from "../componet/Windy";
+import WindyIcon, { HumidIcon } from "../componet/Windy";
 
 export const Home = () => {
   const [searchInput, setSearchInput] = useState("Ethiopia");
@@ -41,7 +41,7 @@ export const Home = () => {
               <p className="">{weather?.wind?.speed}km</p>
             </div>
             <div className="flex space-x-2">
-              <WindyIcon />
+              <HumidIcon />
               <p className="">{weather?.main?.humidity}%</p>
             </div>
             <div className="flex space-x-2">
