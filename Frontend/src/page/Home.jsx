@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import WindyIcon from "../componet/Windy";
 
 export const Home = () => {
   const [searchInput, setSearchInput] = useState("Ethiopia");
@@ -36,15 +37,15 @@ export const Home = () => {
           <p className="">{weather?.weather?.[0].main}</p>
           <div className="w-full flex justify-around">
             <div className="flex space-x-2">
-              <img src="wind.svg" className="!text-blue-400" alt="" />
+              <WindyIcon />
               <p className="">{weather?.wind?.speed}km</p>
             </div>
             <div className="flex space-x-2">
-              <img src="wind.svg" className="!text-blue-400" alt="" />
+              <WindyIcon />
               <p className="">{weather?.main?.humidity}%</p>
             </div>
             <div className="flex space-x-2">
-              <img src="wind.svg" className="!text-blue-400" alt="" />
+              <WindyIcon />
               <p className="">{weather?.wind?.speed}km</p>
             </div>
           </div>
