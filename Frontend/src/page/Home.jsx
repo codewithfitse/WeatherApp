@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import WindyIcon, { HumidIcon } from "../componet/Windy";
+import WindyIcon, { HumidIcon, SunnyCloudyIcon } from "../componet/Windy";
 
 export const Home = () => {
   const [searchInput, setSearchInput] = useState("Ethiopia");
@@ -27,12 +27,7 @@ export const Home = () => {
           <p className="">
             {weather?.name}, {weather?.sys?.country}
           </p>
-          <img
-            src="logo.webp"
-            alt="WeatherPhoto"
-            className="size-24"
-            srcSet=""
-          />
+          <SunnyCloudyIcon />
           <h1 className="">{weather?.main?.temp}°F</h1>
           <p className="">{weather?.weather?.[0].main}</p>
           <div className="w-full flex justify-around">
