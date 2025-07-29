@@ -43,7 +43,7 @@ export const Home = () => {
 
   return (
     <>
-      <div className="w-full h-screen text-white bg-gray-900 flex flex-col items-center overflow-x-hidden">
+      <div className="w-full h-screen text-white bg-clear flex flex-col items-center overflow-x-hidden">
         <header className="w-full h-[70px] flex justify-center items-center font-times bg-white/5 backdrop-blur-2xl">
           <h1 className="">Weather Api</h1>
         </header>
