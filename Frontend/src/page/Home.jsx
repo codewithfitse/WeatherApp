@@ -2,8 +2,11 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 export const Home = () => {
+  const [searchInput, setSearchInput] = useState("Ethiopia");
   const [search, setSearch] = useState("Ethiopia");
   const [weather, setWeather] = useState(null);
+
+  const apiKey = import.meta.VITE_WEATHER_API;
 
   useEffect(() => {
     const res = axios(
@@ -13,7 +16,7 @@ export const Home = () => {
 
   function handleSearch(e) {
     e.preventDefault();
-    setSearch(e.target.value);
+    setSearch(searchInput);
   }
 
   return (
@@ -40,10 +43,10 @@ export const Home = () => {
             <form action="" onSubmit={handleSearch}>
               <input
                 type="text"
-                value={search}
+                value={searchInput}
                 className="w-[60%] p-3 bg-amber-50 text-black rounded-2xl"
                 placeholder="Enter City..."
-                onChange={(e) => setSearch(e.target.value)}
+                onChange={(e) => setSearchInput(e.target.value)}
               />
               <button
                 type="submit"
