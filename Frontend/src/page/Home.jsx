@@ -2,13 +2,19 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 export const Home = () => {
+  const [search, setSearch] = useState("itali");
   const [weather, setWeather] = useState(null);
 
   useEffect(() => {
     const res = axios(
-      `https://api.openweathermap.org/data/2.5/weather?q=itali&appid=83df8b5eea1f607c363ec00812d44b7e`
+      `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=83df8b5eea1f607c363ec00812d44b7e`
     ).then((response) => setWeather(response.data));
-  }, []);
+  }, [search]);
+
+  function handleSearch(e) {
+    e.preventDefault();
+    setSearch(e.target.value);
+  }
 
   return (
     <>
@@ -34,8 +40,10 @@ export const Home = () => {
             <form action="" onSubmit={handleSearch}>
               <input
                 type="text"
+                value={search}
                 className="w-[60%] p-3 bg-amber-50 text-black rounded-2xl"
                 placeholder="Enter City..."
+                onChange={(e) => setSearch(e.target.value)}
               />
               <button
                 type="submit"
