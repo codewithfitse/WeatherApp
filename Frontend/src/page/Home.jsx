@@ -1,43 +1,7 @@
-import { useReducer, useState } from "react";
+import { useState } from "react";
 
 export const Home = () => {
-  const [isDark, setIsDark] = useState(false);
   const [input, setInput] = useState(0);
-  const [transactions, setTransactions] = useState([]);
-
-  function toogle() {
-    setIsDark(!isDark);
-  }
-
-  const [state, dispatch] = useReducer(reducer, { count: 1000 });
-
-  function reducer(state, action) {
-    switch (action.type) {
-      case "inc":
-        return { ...state, count: state.count + 500 };
-      case "dec":
-        return { ...state, count: state.count - 250 };
-      case "calc":
-        return { ...state, count: state.count + Number(action.payload) };
-      default:
-        return state;
-    }
-  }
-
-  function calculate(e) {
-    e.preventDefault();
-    if (isNaN(input) || input === 0) return;
-
-    dispatch({ type: "calc", payload: input });
-
-    const newTransaction = {
-      amount: +input,
-      label: +input > 0 ? "Custom Deposit" : "Custom Withdrawal",
-    };
-
-    setTransactions((prev) => [...prev, newTransaction]);
-    setInput("");
-  }
 
   return (
     <>
