@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export const Home = () => {
-  const [input, setInput] = useState(0);
+  const [weather, setWeather] = useState(null);
 
   return (
     <>
