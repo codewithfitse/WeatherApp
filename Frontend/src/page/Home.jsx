@@ -43,8 +43,11 @@ export const Home = () => {
 
   return (
     <>
-      <div className="w-full h-screen text-white bg-gray-900 flex justify-center">
-        <div className="w-[80%] h-[70%] mt-[10px] p-3 flex flex-col items-center justify-center border-2 border-amber-50 bg-white/5 backdrop-blur-2xl rounded-2xl space-y-3">
+      <div className="w-full h-screen text-white bg-gray-900 flex flex-col items-center">
+        <header className="w-full h-[70px] flex justify-center items-center font-times bg-white/5 backdrop-blur-2xl">
+          <h1 className="">Weather Api</h1>
+        </header>
+        <div className="w-[80%] h-[70%] mt-[20px] p-3 flex flex-col items-center justify-center border-2 border-amber-50 bg-white/5 backdrop-blur-2xl rounded-2xl space-y-3">
           <p className="">
             {weather?.name}, {weather?.sys?.country}
           </p>
