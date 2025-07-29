@@ -16,6 +16,12 @@ Made with ❤️ by [@codewithfitse](https://github.com/codewithfitse)
 
 ---
 
+## 📸 Demo
+
+**Live App**: [[Click Here to see..](https://weather-app-git-main-lilfitses-projects.vercel.app)
+
+---
+
 ## 🔥 Features
 
 - 🌍 Search weather by **city name**
