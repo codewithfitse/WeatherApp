@@ -14,11 +14,11 @@ export const Home = () => {
   const [search, setSearch] = useState("Ethiopia");
   const [weather, setWeather] = useState(null);
 
-  const apiKey = import.meta.VITE_WEATHER_API;
+  const apiKey = import.meta.env.VITE_WEATHER_API;
 
   useEffect(() => {
     const res = axios(
-      `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=83df8b5eea1f607c363ec00812d44b7e`
+      `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=${apiKey}`
     )
       .then((response) => setWeather(response.data))
       .catch((error) => setErr(error));
