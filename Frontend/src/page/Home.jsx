@@ -41,9 +41,23 @@ export const Home = () => {
     }
   };
 
+  const main = weather?.weather?.[0].main;
+
+  const bgChanger = (main) => {
+    switch (main) {
+      case "Clear": {
+        return "bg-clear";
+      }
+    }
+  };
+
   return (
     <>
-      <div className="w-full h-screen text-white bg-clear flex flex-col items-center overflow-x-hidden">
+      <div
+        className={`w-full h-screen text-white ${bgChanger(
+          weather?.weather?.[0].main
+        )} flex flex-col items-center overflow-x-hidden`}
+      >
         <header className="w-full h-[70px] flex justify-center items-center font-times bg-white/5 backdrop-blur-2xl">
           <h1 className="">Weather Api</h1>
         </header>
