@@ -27,18 +27,23 @@ export const Home = () => {
           <p className=""></p>
           <div className="w-full flex justify-around">
             <p className="">{weather?.wind?.speed}km</p>
-            <p className="">02%</p>
+            <p className="">{weather?.main?.humidity}%</p>
             <p className="">8hr</p>
           </div>
           <div className="w-full flex justify-center space-x-6">
-            <input
-              type="text"
-              className="w-[60%] p-3 bg-amber-50 text-black rounded-2xl"
-              placeholder="Enter City..."
-            />
-            <button className="p-3 rounded-2xl bg-gray-800 text-accent">
-              Submit
-            </button>
+            <form action="" onSubmit={handleSearch}>
+              <input
+                type="text"
+                className="w-[60%] p-3 bg-amber-50 text-black rounded-2xl"
+                placeholder="Enter City..."
+              />
+              <button
+                type="submit"
+                className="p-3 rounded-2xl bg-gray-800 text-accent"
+              >
+                Submit
+              </button>
+            </form>
           </div>
         </div>
       </div>
